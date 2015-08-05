@@ -1,0 +1,59 @@
+;------------------------------------------------------------------------------
+; 使用ntray模块制作
+;------------------------------------------------------------------------------
+
+OTSCfgMajorVersion 2
+OTSCfgMinorVersion 0
+
+;-----建立一个托盘组-------
+*nTray SystemTray
+
+;-----设定托盘组-------
+SystemTray
+{	
+	;-----设定托盘的基本信息-------
+	X 0
+	Y $ResolutionY-60$
+	Height 60
+	Width 100
+	color #10000000
+	AlwaysOnTop True
+	HideBalloons False
+	Balloontime 7000
+	OverflowAction SizeRight
+	Start BOTTOMLeft
+	PrimaryDirection vertical
+	
+	;-----设定托盘图标的基本信息-------
+	IconSize 15
+	ColumnSpacing 10
+	RowSpacing 10
+	
+	;-----设定托盘的内边距-------
+	Padding
+	{
+		Left 10
+		Right 10
+		Top 0
+		Bottom 10
+	}
+	
+	;-----设定托盘提示窗口基本信息-------
+	Tooltip
+	{
+		Width 150
+		Height 50
+		AlwaysOnTop True
+		Color #0d2334
+		FontColor #C4C4C4
+		TextOffsetTop 2
+		TextOffsetBottom 2
+		TextOffsetRight 4
+		TextOffsetLeft 4
+		OutlineColor #E3E3E3
+		OutlineWidth 0.5
+	}
+	
+	;-----设定点击托盘区域的非图标部分打开图标id列表-------
+	*On MiddleClickUp none !nTrayListIconIDs
+}
