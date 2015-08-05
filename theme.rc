@@ -1,0 +1,27 @@
+OTSMajorVersion 2
+OTSMinorVersion 0
+
+ThemeVersion	  "0.1"
+ThemeName       "GradientFuck" 
+ThemeAuthor     "Unight"
+
+;-----------------加载需要的模块----
+LoadModule "$ModulesDir$nCore.dll"
+LoadModule "$ModulesDir$nPopup.dll"
+LoadModule "$ModulesDir$nTask.dll"
+LoadModule "$ModulesDir$nClock.dll"
+LoadModule "$ModulesDir$ndesk.dll"
+LoadModule "$ModulesDir$nIcon.dll"
+LoadModule "$ModulesDir$nLabel.dll"
+LoadModule "$ModulesDir$nTray.dll"
+LoadModule "$ModulesDir$nkey.dll"
+
+;-----------------加载配置文件---------
+ConfigDir "$ThemeDir$Config\"
+include		"$ConfigDir$nPopup.rc"
+include		"$ConfigDir$nTask.rc"
+include		"$ConfigDir$nClock.rc"
+include		"$ConfigDir$nIcon.rc"
+include		"$ConfigDir$nLabel.rc"
+include		"$ConfigDir$nTray.rc"
+include		"$ConfigDir$ndesk.rc"
