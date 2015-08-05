@@ -1,0 +1,52 @@
+;------------------------------------------------------------------------------
+; 使用nclock模块制作
+;------------------------------------------------------------------------------
+
+OTSCfgMajorVersion 2
+OTSCfgMinorVersion 0
+
+*nClock Clock
+Clock 
+{
+	;-----设定钟表的基本信息(坐标和宽高)-------
+	x $ResolutionX-200$
+	y 0
+	width 200
+	height 200
+	
+	;------设定钟表的背景颜色-------
+	BrushType	LinearGradient
+	GradientColors 	"SetAlpha(red,60) SetAlpha(GREEN,60) SetAlpha(blue,60)"
+	GradientStops   "0 0.5 1"
+	Gradientendx 200
+	Gradientendy 200
+	
+	;------设定钟表的点击动作-------
+	*On LeftDoubleClick none !execute ["timedate.cpl"]
+	
+	;------设定钟表的三个指针-------
+	HourHand
+	{
+		Color Black
+		Length 60
+		Thickness 4
+		SmoothMovement
+	}
+		
+	MinuteHand
+	{
+		Color yellow
+		Length 70
+		Thickness 2
+		SmoothMovement
+	}
+		
+	SecondHand
+	{
+		Color red
+		Length 100
+		Thickness 2
+		Offset -10
+	
+}
+
